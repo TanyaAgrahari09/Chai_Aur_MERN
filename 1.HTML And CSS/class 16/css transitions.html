@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<head>
+   <title>Transitions</title>
+   <style>
+    .box{
+        height: 30px;
+        width: 70px;
+        background-color: blueviolet;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        border: 3px solid black;
+        box-sizing: border-box;
+        /*transition-property: all;
+        transition-duration: 5s;
+        
+        transition-timing-function: ease-in-out;
+        transition-delay: 3s;*/
+        transition: all 1s ease 2s;
+
+    }
+    .box:hover{
+        background-color: chocolate;
+        width: 200px;
+    }
+   </style>
+</head>
+<body>
+    <div class="box">Click me</div>
+</body>
+</html>

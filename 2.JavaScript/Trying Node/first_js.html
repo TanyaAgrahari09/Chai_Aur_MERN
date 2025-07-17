@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>First time executing JS</title>
+    <script>
+        //console.log('Hello World!');
+        function clickMe(){
+            console.log('Button Clicked');}
+        function changeMe(){
+                /*document.getElementById ('my_para').innerHTML='This is a new paragraph.';  */
+                 document.querySelector ('#my_para').innerHTML='This is a new paragraph.';  
+        }
+        function StyleMe(){
+            document.getElementById ('my_para').style.color = 'red' ;
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to JS world!</h1>
+    <p id="my_para">This is a demo paragraph</p>
+    <button onclick="clickMe()">Click Me</button>
+    <button onclick="changeMe()">Change Me</button>
+    <button onclick="StyleMe()">Style Me</button>
+</body>
+</html>

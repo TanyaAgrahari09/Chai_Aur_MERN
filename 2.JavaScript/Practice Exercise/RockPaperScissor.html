@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rock-Paper-Scissor</title>
+
+    <link rel="stylesheet" href="RockPaperScissor.css">
+  </head>
+  <body class="main">
+    <div class="con">
+      <h1>Rock Paper Scissors Game</h1>
+
+      <p>Click one of the following to play the game!</p>
+
+      <button class="btn" onclick="Rock()">👊Rock</button>
+      <button class="btn" onclick="Paper()">✋Paper</button>
+      <button class="btn" onclick="Scissor()">✌️Scissor</button>
+
+      <p id="PlayerChoice"></p>
+      <p id="ComputerChoice"></p>
+      <h4 id="result"></h4>
+    </div>
+
+    <!-- Writing the Script! -->
+
+    <script>
+      function Rock() {
+        document.querySelector("#PlayerChoice").innerHTML =
+          "You have chosen rock. Lets see what computer chooses!";
+        let computerChoice = getComputerChoice();
+        document.querySelector("#ComputerChoice").innerHTML =
+          "Computer has chosen " + computerChoice + ".";
+
+        if (computerChoice == "rock") {
+          document.querySelector("#result").innerHTML =
+            "It's a tie, Play again!!!";
+        } else if (computerChoice == "paper") {
+          document.querySelector("#result").innerHTML =
+            "Computer won, better luck next time!!";
+        } else {
+          document.querySelector("#result").innerHTML =
+            "Congratulations!You have won!!yeeeaaaahh!";
+        }
+      }
+      function Paper() {
+        document.querySelector("#PlayerChoice").innerHTML =
+          "You have chosen Paper. Lets see what computer chooses!";
+        let computerChoice = getComputerChoice();
+        document.querySelector("#ComputerChoice").innerHTML =
+          "Computer has chosen " + computerChoice + ".";
+
+        if (computerChoice == "rock") {
+          document.querySelector("#result").innerHTML =
+            "Congratulations!You have won!!!Yeahhhh";
+        } else if (computerChoice == "paper") {
+          document.querySelector("#result").innerHTML =
+            "It's a tiee,Play again !!";
+        } else {
+          document.querySelector("#result").innerHTML =
+            "Computer won, Better luck next time!!";
+        }
+      }
+
+      function Scissor() {
+        document.querySelector("#PlayerChoice").innerHTML =
+          "You have chosen Scissor. Lets see what computer chooses!";
+        let computerChoice = getComputerChoice();
+        document.querySelector("#ComputerChoice").innerHTML =
+          "Computer has chosen " + computerChoice + ".";
+
+        if (computerChoice == "rock") {
+          document.querySelector("#result").innerHTML =
+            "Computer won, Better luck next time!!!";
+        } else if (computerChoice == "paper") {
+          document.querySelector("#result").innerHTML =
+            " Congratulations!You have won!!";
+        } else {
+          document.querySelector("#result").innerHTML =
+            "It's a tiee,Play again !!";
+        }
+      }
+      function generateRandomNumber(){
+        return Math.floor(Math.random()*3);
+      }
+
+      function getComputerChoice() {
+        let Num = generateRandomNumber();
+        if (Num === 0) {
+          return "rock";
+        } else if (Num === 1) {
+          return "paper";
+        } else {
+          return "scissor";
+        }
+      }
+    </script>
+
+    <!-- End of script -->
+  </body>
+</html>

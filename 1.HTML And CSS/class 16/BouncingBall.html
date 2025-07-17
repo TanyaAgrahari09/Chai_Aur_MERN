@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animation Practice</title>
+    <style>
+        .container{
+            height: 100vh;
+            background-color: darkolivegreen;
+        }
+        .ball{
+            height: 50px;
+            width: 50px;
+            background-color: crimson;
+            border-radius: 25px;
+            position: relative;
+            top: 93vh;
+            
+            animation : MoveX 5s linear infinite,  MoveY 1s ease-out infinite alternate ;
+        }
+        @keyframes MoveX {
+            0%{
+                left: 0vw;
+            }
+            100%{
+                left: 100vw;
+            }
+        }
+        @keyframes MoveY {
+            0%{
+               top: 93vh;
+            }
+            100%{
+                top: 0vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball">
+
+        </div>
+    </div>
+</body>
+</html>

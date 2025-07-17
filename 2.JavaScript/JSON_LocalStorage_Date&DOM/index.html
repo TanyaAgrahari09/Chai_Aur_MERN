@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practice Exercise</title>
+    
+    <style>
+        #counter{
+            background-color: darkgrey;
+            padding: 5px 20px;
+            border-radius: 5px;
+            height: 50px;
+            width: 150px;
+            font-size: 20px;
+            font-weight: 300;
+            box-shadow: 5px 5px 5px rgb(228, 225, 225);
+            
+        }
+        .even{
+           background-color: blueviolet !important;
+        
+        }
+        .odd{
+           background-color: crimson !important;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="counter" class="even" >0</button>
+
+    <script>
+        
+        let count=0;
+        const button = document.getElementById('counter');
+
+        button.addEventListener('click', function(){
+            count++;
+            button.textContent = count;
+
+            
+
+            if(count % 2 === 0){
+                button.className= 'even';
+            }else{
+                button.className='odd';
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
+
+

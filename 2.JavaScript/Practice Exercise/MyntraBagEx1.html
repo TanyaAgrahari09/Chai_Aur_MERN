@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Myntra Bag Exercise</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="main">
+    <div class="container">
+      <button onclick="addToBag()" id="add-to-bag">Add to Bag</button>
+      <button onclick="moveToWishlist()" id="move-to-wishlist">
+        move to wishlist🛒🛍️
+      </button>
+      <button onclick="add2Items()" id="add-2-items">Add 1+1 sale item</button
+      ><br /><br />
+      <h1 id="my_var">Your bag has 0 items.</h1>
+    </div>
+    <!-- Writing the Script -->
+
+    <script>
+      var numOfItemsInBag = 0;
+
+      function addToBag() {
+        numOfItemsInBag++;
+        console.log(" 1 Item added to the Bag!");
+
+        document.querySelector("#my_var").textContent =
+          "Your bag has " + numOfItemsInBag + " items";
+      }
+
+      function moveToWishlist() {
+        if (numOfItemsInBag >= 1) {
+          numOfItemsInBag--;
+          console.log("1 Item removed from the Bag!");
+
+          document.querySelector("#my_var").textContent =
+            "Your bag has " + numOfItemsInBag + " items";
+        }
+      }
+
+      function add2Items() {
+        numOfItemsInBag += 2;
+        console.log(" 2  more items added to the bag!");
+
+        document.querySelector("#my_var").textContent =
+          "Your bag has " + numOfItemsInBag + " items";
+      }
+    </script>
+
+    <!-- End of Script -->
+  </body>
+</html>

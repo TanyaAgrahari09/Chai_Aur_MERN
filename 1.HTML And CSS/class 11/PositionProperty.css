@@ -1,0 +1,29 @@
+*{
+    margin: 0; padding: 0;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: cornflowerblue;
+    margin: 5px;
+    text-align: center;
+    padding-bottom: 5px;
+    border: 3px solid ;
+    border-radius: 10px;
+
+}
+#box1{
+   position: static;
+}
+#box2{
+   position: relative;
+   top: 20px;
+   left: 5px;
+}
+#box3{
+   position: absolute;
+
+}
+#box4{
+    position: fixed;
+}

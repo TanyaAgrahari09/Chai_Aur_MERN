@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transforms</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            border: 3px solid black;
+            box-sizing: border-box;
+            transition: all 2s;
+            margin: 50px;
+        }
+        .box:hover{
+            
+            background-color: blueviolet;
+            /*transform: rotatey(90deg);*/
+            /*transform: scale(4);*/
+            /*transform: translate(0,-100px);*/
+            transform: skew(-45deg);
+
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box">My box</div>
+  </body>
+</html>

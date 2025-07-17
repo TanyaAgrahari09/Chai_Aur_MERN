@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Game</title>
+    <link rel="stylesheet" href="RockPaperScissor.css">
+</head>
+<body class="main">
+    <div class="con">
+        <h1>Rock Paper Scissors Game</h1>
+  
+        <p>Click one of the following to play the game!</p>
+  
+        <button class="btn" onclick="
+        
+        
+        let computerChoice;
+        let randomNum = Math.floor(Math.random()*4+1);
+        if(randomNum == 1){
+            computerChoice ='👊Rock';
+        }else if (randomNum==2){
+           computerChoice = '✋Paper';
+        }else{
+           computerChoice = '✌️Scissor';
+        }
+
+
+        let result;
+        if(computerChoice ='👊Rock'){
+                result='Tie!'
+        }else if(computerChoice = '✌️Scissor'){
+                result='You won!'
+        }else{
+                 result='I won!';
+        }
+
+
+        document.querySelector('#result').innerHTML=
+        'You chose 👊Rock <br> Computer chose ${computerChoice}. <br> And the result is : ${result}';
+        ">👊Rock</button>
+
+
+        <button class="btn" onclick="
+         
+        let randomNum1 = Math.floor(Math.random()*4+1);
+        let computerChoice1;
+        if(randomNum1 == 1){
+            computerChoice1 ='👊Rock';
+        }else if (randomNum1==2){
+           computerChoice1 = '✋Paper';
+        }else{
+           computerChoice1 = '✌️Scissor';
+        }
+
+
+        
+        if(computerChoice1 ='👊Rock'){
+                 result='You Won!'
+        }else if(computerChoice1 = '✌️Scissor'){
+                result='I won!'
+        }else{
+                 result='Tie!';
+        }
+
+
+        document.querySelector('#result').innerHTML=
+        'You chose ✋Paper <br> Computer chose ${computerChoice1}. <br> And the result is : ${result1}';">✋Paper</button>
+
+
+        <button class="btn" onclick="
+        let randomNum2 = Math.floor(Math.random()*4+1);
+        let computerChoice2;
+        if(randomNum2 == 1){
+            computerChoice2 ='👊Rock';
+        }else if (randomNum2==2){
+           computerChoice2 = '✋Paper';
+        }else{
+           computerChoice2 = '✌️Scissor';
+        }
+
+
+        
+        if(computerChoice2 ='👊Rock'){
+                 result='You Won!'
+        }else if(computerChoice2 = '✌️Scissor'){
+                result='I won!'
+        }else{
+                 result='Tie!';
+        }
+
+
+        document.querySelector('#result').innerHTML=
+        'You chose ✌️Scissor <br> Computer chose ${computerChoice2}. <br> And the result is : ${result2}';
+
+
+        ">✌️Scissor</button>
+  
+        
+        <h4 id="result"></h4>
+      </div>
+      <script>
+        
+      </script>
+</body>
+</html>

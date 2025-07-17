@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="container">
+            <div class="display_input"></div>
+             <!-- <input class="display_input" type="text" value="0"> -->
+            <button class="button"  onclick="displayText ='';document.querySelector('.display_input').innerText = displayText;
+            ">C</button>
+            <button class="button" onclick="displayText +='1';document.querySelector('.display_input').innerText = displayText;
+            ">1</button>
+            <button class="button"  onclick="displayText +='2';document.querySelector('.display_input').innerText = displayText;
+            ">2</button>
+            <button class="button"  onclick="displayText +='+';document.querySelector('.display_input').innerText = displayText;
+            ">+</button>
+            <button class="button"  onclick="displayText +='3';document.querySelector('.display_input').innerText = displayText;
+            ">3</button>
+            <button class="button"  onclick="displayText +='4';document.querySelector('.display_input').innerText = displayText;
+            ">4</button>
+            <button class="button"onclick="displayText +='-';document.querySelector('.display_input').innerText = displayText;
+            " >-</button>
+            <button class="button"  onclick="displayText +='5';document.querySelector('.display_input').innerText = displayText;
+            ">5</button>
+            <button class="button"  onclick="displayText +='6';document.querySelector('.display_input').innerText = displayText;
+            ">6</button>
+           
+            <button class="button" onclick="displayText +='*';document.querySelector('.display_input').innerText = displayText;
+            ">*</button>
+            <button class="button"  onclick="displayText +='7';document.querySelector('.display_input').innerText = displayText;
+            ">7</button>
+            <button class="button"  onclick="displayText +='8';document.querySelector('.display_input').innerText = displayText;
+            ">8</button>
+            <button class="button" onclick="displayText +='/';document.querySelector('.display_input').innerText = displayText;
+            ">/</button>
+            <button class="button" onclick="displayText=eval(displayText);
+            document.querySelector('.display_input').innerText = displayText;
+            ">=</button>
+            <button class="button"  onclick="displayText +='9';document.querySelector('.display_input').innerText = displayText;
+            ">9</button>
+            <button class="button"  onclick="displayText +='.';document.querySelector('.display_input').innerText = displayText;
+            ">.</button>
+            <button class="button"  onclick="displayText +='0';document.querySelector('.display_input').innerText = displayText;
+            ">0</button>
+        </div>
+    </div>
+    <script>
+        let displayText='';
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practice Exercise</title>
+    <script src="Qn3.js"></script>
+    <link rel="stylesheet" href="Qn3.css">
+</head>
+<body>
+    <button class="btn" onclick="counter()" >Button</button>
+    <h6 id="line">Button has been pressed 0 times.</h6>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Button Press Counter</title>
+    <style>
+        #counterButton {
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .even {
+            background-color: blue;
+            color: white;
+        }
+        .odd {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="counterButton" class="even">0</button>
+
+    <script>
+        let count = 0;
+        const button = document.getElementById('counterButton');
+
+        button.addEventListener('click', function() {
+            count++;
+            button.textContent = count;
+
+            if (count % 2 === 0) {
+                button.className = 'even';
+            } else {
+                button.className = 'odd';
+            }
+        });
+    </script>
+
+</body>
+</html>

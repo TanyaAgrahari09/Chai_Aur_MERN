@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Game</title>
+   <link rel="stylesheet" href="RockPaperScissor.css">
+</head>
+<body>
+</head >
+<body class="main">
+  <div class="con">
+    <h1>Rock Paper Scissors Game</h1>
+    <h4 id="score">No games played yet!</h4>
+
+    <p>Click one of the following to play the game!</p>
+
+    <button class="btn" onclick="Rock()">👊Rock</button>
+    <button class="btn" onclick="Paper()">✋Paper</button>
+    <button class="btn" onclick="Scissor()">✌️Scissor</button>
+    <button class="reset-btn" onclick="resetScore()">Reset Score</button>
+
+    
+    <h4 id="result"></h4>
+  </div>
+  <script>
+   let score={
+      computer:0,
+      user:0,
+      tie:0,
+      updateScore: function(){
+         this.saveScore();
+         document.querySelector('#score').innerHTML='Score: Computer Won: '+this.computer+' | User Won: '+ this.user +' | Tie: '+this.tie ;
+      },
+      saveScore: function(){
+         let scoreStr = JSON.stringify(this);
+         localStorage.setItem('score',scoreStr);
+         console.log(`Score Saved: ${scoreStr}`);
+
+      },
+   };
+
+   function initialize(){
+      let scoreStr=  localStorage.getItem('score');
+      if(scoreStr){
+         console.log(`Previous Score Found: ${scoreStr}`);
+         let scoreVal = JSON.parse(scoreStr);
+         score.computer= scoreVal.computer;
+         score.user = scoreVal.user;
+         score.tie = scoreVal.tie;
+         score.updateScore();
+      }
+   }
+
+   function  resetScore(){
+       console.log('resetting score');
+       score.computer=0;
+       score.user = 0;
+       score.tie =0;
+       score.updateScore();
+   }
+
+
+     function Rock(){
+        
+
+        let result;
+        let userchoice = "👊Rock";
+        let computerChoice = getComputerChoice();
+        result= computeResult(userchoice,computerChoice);
+
+        updateResult(userchoice,computerChoice,result);
+     }
+
+     function Paper(){
+        let userchoice="✋Paper";
+        let result;
+        let computerChoice = getComputerChoice();
+        
+        result= computeResult(userchoice,computerChoice);
+        updateResult(userchoice,computerChoice,result);
+
+     }
+
+     function Scissor(){
+      let userchoice="✌️Scissor";
+      let result;
+      let computerChoice = getComputerChoice();
+      result=computeResult(userchoice,computerChoice);
+
+      updateResult(userchoice,computerChoice,result);
+
+
+     }
+
+     function generateRandomNumber(){
+        return Math.floor(Math.random()*4+1);
+     }
+
+     function getComputerChoice(){
+          randomNumber= generateRandomNumber();
+          if(randomNumber==1){
+               return '👊Rock';
+          }else if(randomNumber==2){
+               return '✋Paper';
+          }else{
+               return '✌️Scissor';
+          }
+     }
+
+     function updateResult(userchoice, computerChoice, result){
+        
+
+        document.querySelector('#result').innerHTML=
+        'You chose'+userchoice+ '<br> Computer chose' + computerChoice + '<br> And the result is : ' + result + '.';
+     }
+     
+     function computeResult(userchoice,computerChoice){
+      if(computerChoice =="👊Rock"&& userchoice=="👊Rock"||
+         computerChoice =="✌️Scissor"&& userchoice=="✌️Scissor"||
+         computerChoice =="✋Paper"&& userchoice=="✋Paper"){
+         result= 'Tie!';
+         score.tie++;
+      }else if(computerChoice =="👊Rock" && userchoice=="✋Paper" ||
+               computerChoice =="✋Paper" && userchoice=="✌️Scissor" ||
+               computerChoice =="✌️Scissor" && userchoice=="👊Rock"  ){
+         result='You won!';
+         score.user++;
+      }else{
+         result='Computer won';
+         score.computer++;
+      }
+       score.updateScore();
+
+       return result;
+      }
+
+      initialize();
+   </script>
+</body>
+</html>

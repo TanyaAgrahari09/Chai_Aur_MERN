@@ -1,0 +1,35 @@
+
+      .btn {
+        padding: 10px 15px;
+        background-color: #4caf4f;
+        border: 3px solid black;
+        border-radius: 5px;
+
+        color: white;
+        font-size: 15px;
+      }
+      .reset-btn{
+        padding: 10px 15px;
+        background-color: #f10e0e;
+        border: 3px solid black;
+        border-radius: 5px;
+
+        color: white;
+        font-size: 15px;
+      }
+
+      .btn:hover {
+        background-color: #45a049;
+      }
+
+      .btn:active {
+        background-color: red;
+      }
+
+      .main {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+    
