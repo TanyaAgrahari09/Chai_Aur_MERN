@@ -1,0 +1,25 @@
+.red-btn{
+    background-color: red;
+    padding:  5px 10px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    /* box-shadow: 5px 5px 5px grey ; */
+
+}
+
+.green-btn{
+    background-color: green;
+    padding:  5px 10px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.blue-btn{
+    background-color:blue;
+    padding:  5px 10px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
